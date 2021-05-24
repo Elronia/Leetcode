@@ -7,6 +7,22 @@
 - May not use same element twice
 */
 
+var twoSum = function(numbers, target) { 
+    let pointerLeft = 0;
+    let pointerRight = numbers.length - 1;
+    
+    while (pointerLeft < pointerRight) {
+        const sum = numbers[pointerLeft] + numbers[pointerRight];
+        
+        if (sum > target) {
+            pointerRight -= 1; // pointerRight --;
+        } else if (sum < target) {
+            pointerLeft += 1;
+        } else {
+            return [pointerLeft + 1, pointerRight + 1];
+        }
+    }
+};
 
 /* 
  |    
