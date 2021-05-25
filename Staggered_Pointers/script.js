@@ -18,10 +18,10 @@ var removeDuplicates = function(nums) {
         }
         r += 1; // r ++;
     }
-
+    // console.log(l + 1);
     return l + 1;  // left (non-duplicate) index + 1
 };
-
+removeDuplicates([1,1,2]);
 /* 
 // using for loop
 
