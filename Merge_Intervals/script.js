@@ -27,3 +27,30 @@ var merge = function(intervals) {
     newIntervals.push([lastStart, lastEnd]);
     return newIntervals;
 };
+
+/* 2nd */
+// var merge = function(intervals) {
+//     if ( intervals.length === 1 ) return intervals
+    
+//     intervals.sort( ( intervalA, intervalB ) =>  intervalA[ 0 ] - intervalB[ 0 ]  )
+                
+//     const outputArr = []
+//     let prevInterval = intervals[ 0 ]
+//     outputArr.push( prevInterval )
+    
+//     intervals.forEach( ( interval ) => {
+//         let prevStart = prevInterval[ 0 ]
+//         let prevEnd = prevInterval[ 1 ]
+//         let curStart = interval[ 0 ]
+//         let curEnd = interval[ 1 ]
+        
+//         if ( curStart <= prevEnd ) {
+//             prevInterval[ 1 ] = Math.max( prevEnd, curEnd )
+//         } else {
+//             prevInterval = interval
+//             outputArr.push( prevInterval )
+//         }
+//     } )
+    
+//     return outputArr
+// };
