@@ -1,0 +1,21 @@
+Overview
+
+Intervals are usually represented using arrays.
+    - intervalA = [5, 10] 
+        - start = intervalA[0] = 5
+        - end = intervalB[1] = 10
+    - intervalB = [7, 13]
+A list of intervals is an array of interval arrays.
+    - intervals = [intervalA, intervalB]
+    - Intervals = [ [5, 10], [7, 13] ]
+
+Pseudocode
+- Given two intervals: A and B.
+- Sort intervals based on start time.
+    A.start <= B.start
+- Check if overlapping condition is true.
+    B.start <= A.end
+- Merge overlapping intervals (C is the merged interval)
+    C.start = A.start
+    C.end = max(A.end, B.end)
+- Continue merging until all intervals are checked.
